@@ -5,8 +5,6 @@
 <b>A spiritual successor of <a href="https://github.com/cometa-rocks/cometa">Cometa</a> focused on testing for people without programming knowledge.</b>
 </p>
 
-<a href="https://github.com/LeParadoxHD/testing-labs">Private repo</a>
-
 ### Major features:
 
 - Free-to-use software
@@ -77,3 +75,7 @@ Place your own, beta or paid plugins in the `plugins` folder.
 
 * A daily backup of each test is done at midnight, up to 7 days.
 * Screenshots and video resources are not included in backups.
+
+## Private repo
+
+All paid features are available at our <a href="https://github.com/LeParadoxHD/testing-labs">private repo</a>
