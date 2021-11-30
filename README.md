@@ -5,6 +5,8 @@
 <b>A spiritual successor of <a href="https://github.com/cometa-rocks/cometa">Cometa</a> focused on testing for people without programming knowledge.</b>
 </p>
 
+<a href="https://github.com/LeParadoxHD/testing-labs">Private repo</a>
+
 ### Major features:
 
 - Free-to-use software
