@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/LeParadoxHD/testing-labs/main/resources/github.svg">
+<img src="https://raw.githubusercontent.com/LeParadoxHD/testing-labs-public/main/resources/github.svg">
 </p>
 <p align="center">
 <b>A spiritual successor of <a href="https://github.com/cometa-rocks/cometa">Cometa</a> focused on testing for people without programming knowledge.</b>
