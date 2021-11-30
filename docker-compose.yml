@@ -1,0 +1,107 @@
+version: '3.5'
+
+services:
+  db:
+    container_name: lab_mongo
+    image: mongo
+    restart: always
+    volumes:
+      - ./db_data:/data/db
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USER}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD}
+    ports:
+      - 0.0.0.0:27017:27017
+    networks:
+     - shared
+  
+  mongo-express:
+    container_name: lab_mongo_express
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=${MONGO_ROOT_USER}
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=${MONGO_ROOT_PASSWORD}
+      - ME_CONFIG_MONGODB_PORT
+      - ME_CONFIG_MONGODB_SERVER
+      - ME_CONFIG_BASICAUTH_USERNAME=dev
+      - ME_CONFIG_BASICAUTH_PASSWORD=dev
+    networks:
+     - shared
+
+  redis:
+    container_name: lab_redis
+    image: redis:alpine
+    restart: always
+    volumes:
+      - ./redis_data:/data
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
+    ports:
+      - 0.0.0.0:6379:6379
+    networks:
+     - shared
+
+  api:
+    container_name: lab_api
+    image: node:17-alpine
+    restart: always
+    logging:
+      driver: json-file
+    command: bash start-api.sh
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /data/lab/screenshots:/data/lab/screenshots
+      - /data/lab/videos:/data/lab/videos
+      - .:/code
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
+    working_dir: /code
+    environment:
+      - MODE
+      - MONGO_INITDB_ROOT_USERNAME
+      - MONGO_INITDB_ROOT_PASSWORD
+    ports:
+      - 80:80
+      - 443:443
+    depends_on:
+      - db
+    networks:
+     - shared
+
+  grid:
+    image: aerokube/selenoid
+    container_name: lab_grid
+    logging:
+      driver: json-file
+    ports:
+      - 0.0.0.0:4444:4444
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - .:/code/:ro
+      - /data/lab/videos:/opt/selenoid/video
+    environment:
+      - TZ=Europe/Berlin
+      - OVERRIDE_VIDEO_OUTPUT_DIR=/data/lab/videos
+    networks:
+      - shared
+    restart: always
+    command: ["-conf", "/code/hub/browsers.json", "-video-output-dir", "/opt/selenoid/video", "-log-output-dir", "/opt/selenoid/logs", "-container-network", "testing_labs"]
+  
+  grid-ui:
+    container_name: lab_grid_ui
+    image: aerokube/selenoid-ui
+    networks:
+      - shared
+    ports:
+      - "8080:8080"
+    command: ["--selenoid-uri", "http://lab_grid:4444"]
+
+networks:
+  shared:
+    name: testing_labs
+    driver: "bridge"
