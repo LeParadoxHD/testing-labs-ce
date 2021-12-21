@@ -4,12 +4,17 @@
 <p align="center">
 <b>A spiritual successor of <a href="https://github.com/cometa-rocks/cometa">Cometa</a> focused on testing for people without programming knowledge.</b>
 </p>
+<p align="center">
+   <a href="https://www.testinglabs.dev"><b>TestingLabs Cloud / Demo</b></a>
+</p>
 
 ### Major features:
 
 - Free-to-use software
 - Web and native apps testing
 - Easy setup on the cloud
+- No code focused
+- CI/CD Integration
 
 ### Technologies used:
 
@@ -23,7 +28,7 @@
 - WebdriverIO (Webdriver for Chrome, Firefox, Edge, Opera and IE)
 - TensorFlow (Front & Backend)
 
-## Testing Labs Cloud (BETA)
+## TestingLabs Cloud (BETA)
 Our current Selenium Grid provides up to 170 nodes (shared amongst all users):
 - `100` desktop/mobile Chromium based browser sessions (Chrome and Firefox) [free]
 - `30` desktop/mobile Firefox browser sessions [free]
@@ -58,7 +63,7 @@ Request access to our cloud by filling the form in the **experimental features p
 docker-compose up -d
 ```
 
-**Testing Labs** will be ready when all the container are marked as _healthy_ and will be available at port 80 and 443.
+**TestingLabs** will be ready when all the container are marked as _healthy_ and will be available at port 80 and 443.
 
 You can optionally run `docker-compose logs -f` to see all the logs as the first setup takes some minutes.
 
