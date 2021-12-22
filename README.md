@@ -53,7 +53,7 @@ Request access to our cloud by filling the form in the **experimental features p
 
 - Docker
 - Docker Compose
-- NodeJS 17 (if run locally)
+- KVM Capable host (for Android & Safari containers)
 
 # Getting started
 
