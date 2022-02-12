@@ -2,7 +2,7 @@
 <img src="https://raw.githubusercontent.com/LeParadoxHD/testing-labs-public/main/resources/github.svg">
 </p>
 <p align="center">
-<b>A spiritual successor of <a href="https://github.com/cometa-rocks/cometa">Cometa</a> focused on testing for people without programming knowledge.</b>
+<b>A spiritual successor of <a href="https://iboxshare.com/CometaFront/Cometa">Cometa</a> focused on testing for people without programming knowledge.</b>
 </p>
 <p align="center">
    <a href="https://www.testinglabs.dev"><b>TestingLabs Cloud / Demo</b></a>
