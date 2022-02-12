@@ -29,7 +29,7 @@
 - TensorFlow (Front & Backend)
 
 ## TestingLabs Cloud (BETA)
-Our current Selenium Grid provides up to 170 nodes (shared amongst all users):
+Our current Selenium Grid provides up to 150 nodes (shared amongst all users):
 - `100` desktop/mobile Chromium based browser sessions (Chrome and Firefox) [free]
 - `30` desktop/mobile Firefox browser sessions [free]
 - `20` native mobile apps (Android 8+ and iOS 12+) [paid]
