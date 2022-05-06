@@ -1,14 +1,22 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/LeParadoxHD/testing-labs-public/main/resources/github.svg">
+<a href="https://www.testinglabs.dev"><img src="https://raw.githubusercontent.com/LeParadoxHD/testing-labs-ce/main/resources/github.svg"></a>
 </p>
 <p align="center">
 <b>A spiritual successor of <a href="https://iboxshare.com/CometaFront/Cometa">Cometa</a> focused on testing for people without programming knowledge.</b>
 </p>
 <p align="center">
-   <a href="https://www.testinglabs.dev"><b>TestingLabs Cloud / Demo</b></a>
+   <b>TestingLabs Enterprise Edition<a href="https://www.testinglabs.dev">Website</a> / <a href="https://github.com/LeParadoxHD/testing-labs">Repo</a></b>
 </p>
 
-This repo is 1 month behind the <a href="https://github.com/LeParadoxHD/testing-labs">official TestingLabs</a>, join our enterprise repo to have the latest updates.
+### Enterprise Edition
+While the Comunity Edition is very limited, the Enterprise Edition includes the following:
+
+* AI based features
+* Web & Mobile App analysis
+* Step editor (including Visual Scratch)
+* Queues
+* CI/CD Integration
+* Automations to create Android and iOS based images
 
 ### Major features:
 
@@ -32,9 +40,9 @@ This repo is 1 month behind the <a href="https://github.com/LeParadoxHD/testing-
 
 ## TestingLabs Cloud (BETA)
 Our current Selenium Grid provides up to 150 nodes (shared amongst all users):
-- `100` desktop/mobile Chromium based browser sessions (Chrome, Edge and Opera) [free]
-- `30` desktop/mobile Firefox browser sessions [free]
-- `20` native mobile apps (Android 5+ and iOS 10+) [paid]
+- `100` desktop/mobile Chromium based browser sessions (Chrome, Edge and Opera) [Community Edition]
+- `30` desktop/mobile Firefox browser sessions [Community Edition]
+- `20` native mobile apps (Android 5+ and iOS 10+) [Enterprise Edition]
 
 Request access to our cloud by filling the form in the **experimental features page**. If you're eligible for BETA access, you will get a plugin zip allowing you to use our Cloud. See Plugins section for installation info.
 
@@ -75,7 +83,7 @@ Modify the `docker-compose.yml` _mode_ variable from `prod` to `dev`.
 
 ### Plugins
 
-Place your own, beta or paid plugins in the `plugins` folder.
+Place your own, beta or plugins in the `plugins` folder.
 **NOTES:** Instructions on how to write plugins will be provided in the future.
 
 ## Backups
