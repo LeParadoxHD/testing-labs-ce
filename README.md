@@ -8,6 +8,8 @@
    <a href="https://www.testinglabs.dev"><b>TestingLabs Cloud / Demo</b></a>
 </p>
 
+This repo is 1 month behind the <a href="https://github.com/LeParadoxHD/testing-labs">official TestingLabs</a>, join our enterprise repo to have the latest updates.
+
 ### Major features:
 
 - Free-to-use software
