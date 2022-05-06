@@ -5,7 +5,7 @@
 <b>A spiritual successor of <a href="https://iboxshare.com/CometaFront/Cometa">Cometa</a> focused on testing for people without programming knowledge.</b>
 </p>
 <p align="center">
-   <b>TestingLabs Enterprise Edition<a href="https://www.testinglabs.dev">Website</a> / <a href="https://github.com/LeParadoxHD/testing-labs">Repo</a></b>
+   <b>TestingLabs Enterprise Edition <a href="https://www.testinglabs.dev">Website</a> / <a href="https://github.com/LeParadoxHD/testing-labs">Repo</a></b>
 </p>
 
 ### Enterprise Edition
